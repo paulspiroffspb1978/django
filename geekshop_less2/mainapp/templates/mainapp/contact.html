@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Контакты</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/fonts/font-awesome/css/font-awesome.css">
-	<img src="/static/img/arrow.png" alt="arrow">
 	
+	
+	<link rel="stylesheet" type="text/css" href={% static 'style.css' %}>
+	<link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href={% static 'css/style.css' %}>
+    <link rel="stylesheet" href={% static 'fonts/font-awesome/css/font-awesome.css' %}>
+    <img src="/static/img/arrow.png" alt="arrow">
 	
 	
 	
@@ -17,14 +19,10 @@
 	<div class="container">
 		<div class="hero">
 			<div class="header clearfix">
-				<a href="index.html" class="logo"></a>
+				<a href="http://127.0.0.1:8000/" class="logo"></a>
 			
-				<ul class="menu">
-                    <li><a href="/" class="active">домой</a></li>
-                    <li><a href="/products/">продукты</a></li>
-                    <li><a href="/contact/">контакты</a></li>
-                </ul>
-						
+				
+				{% include 'mainapp/includes/inc_menu.html' %}		
 				
 				
 				
